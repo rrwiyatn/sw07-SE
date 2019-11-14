@@ -47,7 +47,7 @@ class LaneFitlerParticle(Configurable, LaneFilterInterface):
             # Your code here
             d_noise = np.random.normal(0, self.sigma_d)
             phi_noise = np.random.normal(0, self.sigma_phi)
-            dt_multiplier = 1.
+            dt_multiplier = 0.15
             new_d = self.d + (dt * dt_multiplier * v * np.sin(self.phi)) + d_noise
             # new_d = self.d + (dt * dt_multiplier * v + d_noise) * np.sin(self.phi)
             new_phi = self.phi + (dt * dt_multiplier * w) + phi_noise

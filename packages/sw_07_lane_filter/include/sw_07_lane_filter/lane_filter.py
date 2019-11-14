@@ -99,7 +99,7 @@ class LaneFitlerParticle(Configurable, LaneFilterInterface):
 
     def __init__(self):
         # Parameters
-        self.nb_particles = 50
+        self.nb_particles = 10
 
         ## Initialization 
         self.mean_d_0 = 0       # Expected value of d at initialization

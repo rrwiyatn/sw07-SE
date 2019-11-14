@@ -47,7 +47,7 @@ class LaneFitlerParticle(Configurable, LaneFilterInterface):
             # Your code here
             d_noise = np.random.normal(0, self.sigma_d)
             phi_noise = np.random.normal(0, self.sigma_phi)
-            dt_multiplier = 0.15
+            dt_multiplier = 1.
             new_d = self.d + (dt * dt_multiplier * v * np.sin(self.phi)) + d_noise
             # new_d = self.d + (dt * dt_multiplier * v + d_noise) * np.sin(self.phi)
             new_phi = self.phi + (dt * dt_multiplier * w) + phi_noise
@@ -99,7 +99,7 @@ class LaneFitlerParticle(Configurable, LaneFilterInterface):
 
     def __init__(self):
         # Parameters
-        self.nb_particles = 500
+        self.nb_particles = 250
 
         ## Initialization 
         self.mean_d_0 = 0       # Expected value of d at initialization

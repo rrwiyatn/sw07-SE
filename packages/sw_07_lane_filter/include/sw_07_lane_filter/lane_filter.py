@@ -83,7 +83,7 @@ class LaneFitlerParticle(Configurable, LaneFilterInterface):
                 # print('%d - diff_d: %.4f - diff_phi: %.4f - diff: %.4f' % (i,diff_d,diff_phi,diff))
                 score += (1. / diff)
 
-                ## 2: calculate non-normalized distance, then score is inversely proportional to it
+                ## 2 (probably bad idea): calculate non-normalized distance, then score is inversely proportional to it
                 # diff = np.linalg.norm(np.array([d,phi]) - np.array([ds[i],phis[i]]))
                 # score += (1. / diff)
 
